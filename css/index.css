@@ -1,47 +1,70 @@
-* {
-    border: 1px solid black; /*Para crear un borde alrededor de todas las cajas*/
-}
+ * {
+     border: 1px solid black;
+     /*Para crear un borde alrededor de todas las cajas*/
+ }
 
-header {
-    height: 100px;
-    display: flex;
-    justify-content: space-between;
-}
+ header {
+     height: 100px;
+     display: flex;
+     justify-content: space-between;
+ }
 
-nav {
-    height: 50px;
-}
+ nav {
+     height: 50px;
+ }
 
-section {
-    height: 500px;
-}
+ section {
+     height: 500px;
+ }
 
-footer {
-    height: 100px;
-}
-nav ul{
-    display: flex; /*hijos uno al lado del otro*/
-    justify-content: right;
-    list-style-type: none; /*Para quitar los puntos o lon números de las listas*/
-}
-nav ul li{
-    margin-right: 20px;
-    font-size: 20px;
-}
-nav ul li a{
-    text-decoration: none; /*Para quitar el subrayado de los textos de a (en este caso texto) en line */
-}
+ footer {
+     height: 100px;
+ }
+
+ nav ul {
+     display: flex;
+     /*hijos uno al lado del otro*/
+     justify-content: right;
+     list-style-type: none;
+     /*Para quitar los puntos o lon números de las listas*/
+ }
+
+ nav ul li {
+     margin-right: 20px;
+     font-size: 20px;
+ }
+
+ nav ul li a {
+     text-decoration: none;
+     /*Para quitar el subrayado de los textos de a (en este caso texto) en line */
+ }
+
+ .seccion1 {
+     background-image: url("../img/Playa.webp");
+     /* dos puntos para volver atrás en una carpeta, aquí estamos indicando la ruta donde esta la imagen que quermos poner de fondo en la clase seccion1*/
+     background-size: cover;
+     background-position: center;
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     background-color: rgba(0, 0, 0, 0.7);
+     color: white;
+ }
 
 
-/*Estilo para pantallas pequeñas*/
-@media (max-width: 768px) {
-    header h1 {
-        display: none; /*Para ocultar el texto de h1 en pantallas pequeñas*/
-    }
-    header{
-        justify-content: space-around; /*Para centrar dejando el espacio libre a los lados*/
-    }
-    nav ul{
-        justify-content: center;
-    }
-}
+ /*Estilo para pantallas pequeñas*/
+ @media (max-width: 768px) {
+     header h1 {
+         display: none;
+         /*Para ocultar el texto de h1 en pantallas pequeñas*/
+     }
+
+     header {
+         justify-content: space-around;
+         /*Para centrar dejando el espacio libre a los lados*/
+     }
+
+     nav ul {
+         justify-content: center;
+     }
+ }
