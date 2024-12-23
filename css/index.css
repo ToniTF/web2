@@ -79,6 +79,25 @@
      z-index: 2;
      border: none;
  }
+ .seccion3 {
+    background-image: url("../img/Rio.jpg");
+    /* dos puntos para volver atrás en una carpeta, aquí estamos indicando la ruta donde esta la imagen que quermos poner de fondo en la clase seccion1*/
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.seccion3 h3 {
+    font-size: 100px;
+    color: white;
+    position: relative;
+    z-index: 2;
+    border: none;
+}
 
 
  /*Estilo para pantallas pequeñas*/
@@ -114,4 +133,12 @@
          border: none;
 
      }
+     .seccion3 h3 {
+        font-size: 40px;
+        color: white;
+        position: relative;
+        z-index: 2;
+        border: none;
+
+    }
  }
