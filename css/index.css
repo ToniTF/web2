@@ -41,15 +41,15 @@
  }
 
  .seccion1 {
-     background-image: url("../img/Playa.webp");
-     /* dos puntos para volver atrás en una carpeta, aquí estamos indicando la ruta donde esta la imagen que quermos poner de fondo en la clase seccion1*/
-     background-size: cover;
-     background-position: center;
-     display: flex;
-     justify-content: space-around;
-     align-items: center;
-     z-index: -1;
-     background-color: rgba(0, 0, 0, 0.7);
+    background-image: url("../img/Playa.webp");
+    /* dos puntos para volver atrás en una carpeta, aquí estamos indicando la ruta donde esta la imagen que quermos poner de fondo en la clase seccion1*/
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.7);
  }
 
  .seccion1 h3 {
