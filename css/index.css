@@ -61,7 +61,7 @@ nav ul li a {
     /*dos puntos para volver atrás en carpetas o directorios*/
     background-size: cover;
     background-position: center;
-    opacity: 0.5;
+    opacity: 0.8;
     /* Ajusta el valor de opacidad según tus necesidades */
     z-index: -1;
     /* Coloca la imagen detrás del contenido */
@@ -77,7 +77,7 @@ nav ul li a {
     background-image: url("../img/montana.jpg");
     background-size: cover;
     background-position: center;
-    opacity: 0.5;
+    opacity: 0.8;
     /* Ajusta el valor de opacidad según tus necesidades */
     z-index: -1;
     /* Coloca la imagen detrás del contenido */
@@ -93,7 +93,7 @@ nav ul li a {
     background-image: url("../img/Rio.jpg");
     background-size: cover;
     background-position: center;
-    opacity: 0.5;
+    opacity: 0.8;
     /* Ajusta el valor de opacidad según tus necesidades */
     z-index: -1;
     /* Coloca la imagen detrás del contenido */
@@ -109,7 +109,7 @@ nav ul li a {
     background-image: url("../img/Paracaidas.jpg");
     background-size: cover;
     background-position: center;
-    opacity: 0.5;
+    opacity: 0.8;
     /* Ajusta el valor de opacidad según tus necesidades */
     z-index: -1;
     /* Coloca la imagen detrás del contenido */
