@@ -1,0 +1,46 @@
+body>div{ /*Para seleccionar al primer hijo del body*/
+ width: 40%;
+ margin: 0 auto;
+ text-align: center;
+}
+img{
+    width: 100px;
+    height: 100px;
+}
+body{
+    height: 100vh; /*Seleccionado que el body ocupe el 100% de la pantalla así es como centraremos el div*/
+    display: flex;
+    align-items: center;
+    background-color: aqua;
+    align-items: center;
+}
+form{
+    border: 2px solid black;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column; /*Para poner uno encima del otro*/
+    font-size: 30px; 
+    align-items: center;
+    padding: 10px;
+}
+form input{
+    font-size: 30px;
+    width: 80%;
+}
+button{
+    font-size: 30px;
+    margin: 20px;
+    padding: 10px;
+    width: 82%;
+    background-color: rgb(121, 116, 116);
+    color: white;
+    border: none;
+}
+@media (max-width: 768px) {
+    body>div{ /*Para seleccionar al primer hijo del body*/
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
+       }
+
+}

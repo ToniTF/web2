@@ -1,0 +1,60 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.registro-form {
+    background-color: #fff;
+    padding: 33px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 40%; /* Ajusta el tamaño del contenedor al 40% del body */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.registro-form h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.registro-form input[type="text"], 
+.registro-form input[type="email"], 
+.registro-form input[type="password"], 
+.registro-form input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.registro-form button {
+    
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.registro-form button:hover {
+    background-color: #45a049;
+}
+@media (max-width: 768px) {
+    body>div{ /*Para seleccionar al primer hijo del body*/
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
+       }
+
+}

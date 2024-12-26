@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web2 - login</title>
+    <link rel="stylesheet" href="css/login.css">
+    <style>
+        body {
+            background-image: url("img/fondo\ para\ login.jpg");
+            background-size: cover;
+            /* Ajusta la imagen para que cubra toda la pantalla */
+            background-position: center;
+            /* Centra la imagen */
+            background-repeat: no-repeat;
+            /* Evita que la imagen se repita */
+            margin: 0;
+            height: 100vh;
+
+            a {
+                color: #3498db;
+                /* Cambia el color del texto */
+                text-decoration: none;
+                /* Elimina el subrayado del enlace */
+                font-weight: bold;
+                /* Cambia el peso de la fuente a negrita */
+            }
+
+            a:hover {
+                color: #2980b9;
+                /* Cambia el color del texto al pasar el ratón por encima */
+                text-decoration: underline;
+                /* Añade subrayado al pasar el ratón por encima */
+            }
+            p {
+                font-size: 20px;
+                color: #e0e6eb;
+                /* Cambia el color del texto */
+                text-decoration: none;
+                /* Elimina el subrayado del enlace */
+                font-weight: bold;
+                /* Cambia el peso de la fuente a negrita */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <img src="img/Logo3.jpeg" alt="logo">
+        <form action="" method="get"> <!--Para introducir formularios en los que los usuarios puedan interactuar-->
+            <label for=""> <!--Etiquetas-->
+                <strong>Usuario</strong>
+            </label>
+            <input type="text" name="" id="Usuario"> <!--Para que el usuario pueda interactuar-->
+            <label for="password">
+                <strong>Password</strong>
+            </label>
+            <input type="password" name="" id="password">
+            <button disabled> <!--Para introducir un boton para enviar los datos cubiertos en las label-->
+                Login
+            </button>
+            <p>Haz clic en este <a href="registro.html">enlace</a> para registrarte.</p>
+        </form>
+    </div>
+
+</body>
+
+</html>
