@@ -4,13 +4,15 @@
 }
 
 header {
+    color: white;
     height: 100px;
     display: flex;
     justify-content: space-between;
-    background-color: aqua;
+    background-color: rgb(81, 81, 156);
 }
 
 nav {
+    background-color: aquamarine;
     height: 50px;
 }
 
@@ -46,7 +48,8 @@ nav ul li a {
 .seccion4 {
     position: relative;
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
@@ -132,7 +135,7 @@ nav ul li a {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: aqua;
+    background-color: rgb(81, 81, 156);
     font-size: 40px;
     color: whitesmoke;
 }
@@ -140,7 +143,15 @@ nav ul li a {
 .pie_de_pagina h3 {
     border: none;
 }
-
+section P{
+    display: none;
+}
+section h3:hover+p{
+    display: block;
+    color: white;
+    background-color: rgb(81, 81, 156);
+    width: 80%;
+}
 /*Estilo para pantallas pequeñas*/
 @media (max-width: 768px) {
     header h1 {
