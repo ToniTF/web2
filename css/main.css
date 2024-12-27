@@ -17,4 +17,5 @@ header{
     height: 100%;
     width: 100px;
     border-radius: 50%; /*para que sea redondo*/
+    background-color: white;
 }
