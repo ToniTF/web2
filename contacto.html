@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="css/contacto.css">
+</head>
+
+<body>
+    <header>
+        <img id=logo src="img/Logo3.jpeg" alt="Logo web2">
+        <h1>FormaClassroom</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
+
+    <section class="contact">
+        <h2>Contacto</h2>
+        <form action="/submit" method="post">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Mensaje:</label>
+            <textarea id="message" name="message" required></textarea>
+            <label for="authorization" class="checkbox-label"> <input type="checkbox" id="autorizacion"
+                    name="authorization" required> Autorizo el uso de mis datos para este propósito </label>
+
+            <button id="btnEnviar" disabled>Enviar</button>
+        </form>
+    </section>
+    <script src="js/contacto.js"></script>
+
+    <footer class="pie_de_pagina">
+        <h3>Web creada como práctica de desarrollo de páginas web</h3>
+
+    </footer>
+</body>
+
+</html>
