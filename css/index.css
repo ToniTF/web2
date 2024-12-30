@@ -1,11 +1,26 @@
-
-
 header {
     color: white;
     height: 100px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
     background-color: rgb(81, 81, 156);
+    position: relative;
+    /* Para posicionar el logo */
+}
+
+header img {
+    position: absolute;
+    left: 20px;
+    /* Posicionar el logo a la izquierda */
+    width: 100px;
+    height: 100px;
+}
+
+header h1 {
+    font-size: 60px;
+    margin: 0;
+    /* Eliminar márgenes */
 }
 
 nav {
@@ -140,15 +155,18 @@ nav ul li a {
 .pie_de_pagina h3 {
     border: none;
 }
-section P{
+
+section P {
     display: none;
 }
-section h3:hover+p{
+
+section h3:hover+p {
     display: block;
     color: white;
     background-color: rgb(81, 81, 156);
     width: 80%;
 }
+
 /*Estilo para pantallas pequeñas*/
 @media (max-width: 768px) {
     header h1 {

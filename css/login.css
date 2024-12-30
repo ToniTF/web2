@@ -3,6 +3,7 @@ body>div{ /*Para seleccionar al primer hijo del body*/
  margin: 0 auto;
  text-align: center;
 }
+
 img{
     width: 100px;
     height: 100px;
@@ -22,6 +23,8 @@ form{
     font-size: 30px; 
     align-items: center;
     padding: 10px;
+    z-index: 1;
+    backdrop-filter: blur(10px);
 }
 form input{
     font-size: 30px;
@@ -35,6 +38,10 @@ button{
     background-color: rgb(121, 116, 116);
     color: white;
     border: none;
+}
+.enlace{
+    font-size: 20px;
+    color: rgb(10, 127, 49);
 }
 @media (max-width: 768px) {
     body>div{ /*Para seleccionar al primer hijo del body*/
