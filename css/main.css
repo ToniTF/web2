@@ -29,7 +29,7 @@ header {
 #userMenu {
     display: none;
     position: fixed;
-    background-color:  white;
+    background-color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     right: 10px;
     top: 100px;
@@ -47,31 +47,39 @@ header {
     text-decoration: none;
     color: black;
 }
-aside{
+
+aside {
     width: 30%;
 }
-.asideMovil{
+
+.asideMovil {
     display: none;
 }
-.contenedroPrincipal{
+
+.contenedroPrincipal {
     width: 70%;
 }
-main{
+
+main {
     height: 80vh;
     display: flex;
 }
-aside ul{
-  list-style: none;   
+
+aside ul {
+    list-style: none;
 }
-aside li{
-    font-size: 30px; 
-    margin: 10px;   
+
+aside li {
+    font-size: 30px;
+    margin: 10px;
 }
-aside i{
+
+aside i {
     margin-right: 20px;
     width: 30px;
-    
+
 }
+
 @media (max-width: 768px) {
     header h1 {
         display: none;
@@ -91,21 +99,43 @@ aside i{
         justify-content: space-between;
     }
 
-    aside{
+    aside {
         display: none;
     }
-    .contenedroPrincipal{
+
+    .contenedroPrincipal {
         width: 100%;
     }
-    .asideMovil{
+
+    .asideMovil {
         display: block;
     }
-    main{
+
+    main {
         flex-direction: column;
     }
-    #asideMovil{
+
+    #asideMovil {
         list-style: none;
         display: none;
+        font-size: 20px;
+        padding-left: 0;
+        
     }
-    
+
+    #burguer {
+        display: block;
+        font-size: 30px;
+        margin: 10px;
+    }
+
+    #asideMovil li {
+        margin: 10px;
+        border-bottom: 1px solid #504b4b;
+    }
+    #asideMovil li i {
+        margin-right: 20px;
+        width: 30px;
+    }
+
 }
