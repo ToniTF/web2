@@ -91,35 +91,6 @@ aside i{
         justify-content: space-between;
     }
 
-    .imgUser {
-        height: 100%;
-        width: 100px;
-        border-radius: 50%;
-        /*para que sea redondo*/
-        background-color: white;
-    }
-
-    #userMenu {
-        display: none;
-        position: fixed;
-        background-color: white;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        right: 10px;
-        top: 100px;
-        /* Ajusta según sea necesario */
-    }
-
-    #userMenu li {
-        list-style: none;
-        margin: 0;
-        padding: 10px;
-        border-bottom: 1px solid #ccc;
-    }
-
-    #userMenu li a {
-        text-decoration: none;
-        color: black;
-    }
     aside{
         display: none;
     }
@@ -132,4 +103,9 @@ aside i{
     main{
         flex-direction: column;
     }
+    #asideMovil{
+        list-style: none;
+        display: none;
+    }
+    
 }
