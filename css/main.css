@@ -3,9 +3,9 @@
     width: 100px;
 }
 
-* {
+/** {
     border: 1px solid red;
-}
+}*/
 
 header {
     background-color: rgb(81, 81, 156);
@@ -57,7 +57,20 @@ aside{
     width: 70%;
 }
 main{
+    height: 80vh;
     display: flex;
+}
+aside ul{
+  list-style: none;   
+}
+aside li{
+    font-size: 30px; 
+    margin: 10px;   
+}
+aside i{
+    margin-right: 20px;
+    width: 30px;
+    
 }
 @media (max-width: 768px) {
     header h1 {
@@ -106,5 +119,17 @@ main{
     #userMenu li a {
         text-decoration: none;
         color: black;
+    }
+    aside{
+        display: none;
+    }
+    .contenedroPrincipal{
+        width: 100%;
+    }
+    .asideMovil{
+        display: block;
+    }
+    main{
+        flex-direction: column;
     }
 }
