@@ -16,6 +16,9 @@ header {
 
 
 nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
     background-color: aquamarine;
     height: 50px;
 }
@@ -23,7 +26,6 @@ nav {
 nav ul {
     display: flex;
     /*hijos uno al lado del otro*/
-    justify-content: right;
     list-style-type: none;
     /*Para quitar los puntos o los números de las listas*/
 }
