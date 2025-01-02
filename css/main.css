@@ -47,3 +47,52 @@ header {
     text-decoration: none;
     color: black;
 }
+@media (max-width: 768px) {
+    header h1 {
+        display: none;
+    }
+
+    .logo3 {
+        height: 100px;
+        width: 100px;
+    }
+
+    header {
+        background-color: rgb(81, 81, 156);
+        height: 100px;
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .imgUser {
+        height: 100%;
+        width: 100px;
+        border-radius: 50%;
+        /*para que sea redondo*/
+        background-color: white;
+    }
+
+    #userMenu {
+        display: none;
+        position: fixed;
+        background-color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        right: 10px;
+        top: 100px;
+        /* Ajusta según sea necesario */
+    }
+
+    #userMenu li {
+        list-style: none;
+        margin: 0;
+        padding: 10px;
+        border-bottom: 1px solid #ccc;
+    }
+
+    #userMenu li a {
+        text-decoration: none;
+        color: black;
+    }
+}
