@@ -34,5 +34,36 @@ document.querySelector('.imgUser').addEventListener('click', () => {
         const mm = String(today.getMonth() + 1).padStart(2, '0'); // Enero es 0
         const dd = String(today.getDate()).padStart(2, '0');
         const todayFormatted = `${yyyy}-${mm}-${dd}`;
-        fechaInput.value = todayFormatted;
+        fechaInput.value = todayFormatted; // Asignar la fecha de hoy al campo de entrada
     });
+    formulario.onsubmit=function(e){
+        e.preventDefault();
+        var incidencia=document.getElementById("descripcion").value;
+        var fecha=document.getElementById("fecha").value;
+        var tabla=document.getElementById("tablaIncidencias");
+        var tr=document.createElement("tr");
+        var td1=document.createElement("td");
+        var td2=document.createElement("td");
+        var td3=document.createElement("td");
+        var td4=document.createElement("td");
+        var i=document.createElement("i");
+        i.classList.add("fa-solid");
+        i.classList.add("fa-trash");
+        i.onclick=function(e){
+            var row=this.closest("tr");
+            row.remove();
+        };
+        td1.innerText=99;
+        td2.innerText=fecha;
+        td3.innerText=incidencia;
+        td4.appendChild(i);
+        tr.appendChild(td1);
+        tr.appendChild(td2);
+        tr.appendChild(td3);
+        tr.appendChild(td4);
+        tabla.appendChild(tr);
+        formulario.reset();
+    };
+    
+      
+        
