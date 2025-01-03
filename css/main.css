@@ -50,14 +50,24 @@ header {
 
 aside {
     width: 30%;
+    background-color: rgb(193, 184, 202);
+    border-right: 2px solid #504b4b;
 }
 
 .asideMovil {
     display: none;
 }
 
-.contenedroPrincipal {
+.contenedorPrincipal {
     width: 70%;
+    font-size: 20px;
+    color: white;
+    background-image: url("../img/Fondo-Main.jpg"); /* URL de la imagen de fondo */
+    /* Otras propiedades de fondo (opcional) */
+    background-size: cover; /* Ajusta la imagen para cubrir toda el área */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita repetir la imagen */
+    opacity: 0.7;
 }
 
 main {
@@ -79,8 +89,20 @@ aside i {
     width: 30px;
 
 }
+footer{
+    background-color:  rgb(81, 81, 156);
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
 
 @media (max-width: 768px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh; /* Ocupa toda la altura de la viewport */
+    }/*Esta regla hace que el cuerpo de la página sea un contenedor flex con dirección de columna. Esto asegura que los elementos hijos (como header, main y footer) se apilen verticalmente y ocupen todo el espacio disponible.*/
     header h1 {
         display: none;
     }
@@ -103,8 +125,16 @@ aside i {
         display: none;
     }
 
-    .contenedroPrincipal {
+    .contenedorPrincipal {
         width: 100%;
+        font-size: 20px;
+        color: white;
+        background-image: url("../img/Fondo-Main.jpg"); /* URL de la imagen de fondo */
+        /* Otras propiedades de fondo (opcional) */
+        background-size: cover; /* Ajusta la imagen para cubrir toda el área */
+        background-position: center; /* Centra la imagen */
+        background-repeat: no-repeat; /* Evita repetir la imagen */
+        opacity: 0.7;
     }
 
     .asideMovil {
@@ -113,6 +143,7 @@ aside i {
 
     main {
         flex-direction: column;
+        flex: 1; /* Ocupa todo el espacio restante después de header y footer */
     }
 
     #asideMovil {
