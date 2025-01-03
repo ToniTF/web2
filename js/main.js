@@ -43,7 +43,7 @@ formulario.onsubmit = function (e) {
     e.preventDefault();
     var incidencia = document.getElementById("descripcion").value;
     var fecha = document.getElementById("fecha").value;
-    var tabla = document.getElementById("tablaIncidencias");
+    var tabla = document.getElementById("tbodyIncidencias");
     var tr = document.createElement("tr");
     var td1 = document.createElement("td");
     var td2 = document.createElement("td");

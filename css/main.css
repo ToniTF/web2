@@ -70,6 +70,7 @@ aside {
     background-position: center; /* Centra la imagen */
     background-repeat: no-repeat; /* Evita repetir la imagen */
     opacity: 0.7;
+    overflow: auto;//*Para que el contenido se desplace si es necesario sin sobrepasar el footer por ejemplo*/
 }
 
 main {
