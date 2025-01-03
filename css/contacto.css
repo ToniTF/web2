@@ -14,23 +14,26 @@ header {
     background-color: rgb(81, 81, 156);
 }
 
-
 nav {
     background-color: aquamarine;
     height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: right;
 }
 
 nav ul {
     display: flex;
     /*hijos uno al lado del otro*/
-    justify-content: right;
     list-style-type: none;
     /*Para quitar los puntos o los números de las listas*/
+
 }
 
 nav ul li {
     margin-right: 20px;
     font-size: 20px;
+    align-items: center;
 }
 
 nav ul li a {
@@ -41,7 +44,8 @@ nav ul li a {
 nav ul li a:hover {
     text-decoration: underline;
 }
-section{
+
+section {
     height: 500px;
 }
 
@@ -92,6 +96,7 @@ section{
 footer {
     height: 100px;
 }
+
 .pie_de_pagina {
     display: flex;
     justify-content: center;
