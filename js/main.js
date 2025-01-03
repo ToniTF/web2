@@ -65,7 +65,7 @@ formulario.onsubmit = function (e) {
     tr.appendChild(td3);
     tr.appendChild(td4);
     tabla.appendChild(tr);
-    formulario.reset();
+    formulario.reset(); //Resetea el formulario, con lo cual volvemos a añadir despues el campo de la fecha del día de hoy
     document.getElementById('fecha').value = new Date().toISOString().substring(0, 10);
 
 };
