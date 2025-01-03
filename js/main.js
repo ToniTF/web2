@@ -66,6 +66,8 @@ formulario.onsubmit = function (e) {
     tr.appendChild(td4);
     tabla.appendChild(tr);
     formulario.reset();
+    document.getElementById('fecha').value = new Date().toISOString().substring(0, 10);
+
 };
 function formatearFecha(fechaOriginal) {
     var datosFecha = fechaOriginal.split('-'); //split es un metodo que separar una cadena de texto en un caracter que yo decida
