@@ -36,6 +36,8 @@ document.querySelector('.imgUser').addEventListener('click', () => {
         const todayFormatted = `${yyyy}-${mm}-${dd}`;
         fechaInput.value = todayFormatted; // Asignar la fecha de hoy al campo de entrada
     });
+    
+    var formulario=document.getElementById("formIncidencias");
     formulario.onsubmit=function(e){
         e.preventDefault();
         var incidencia=document.getElementById("descripcion").value;
