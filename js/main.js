@@ -15,3 +15,24 @@ document.querySelector('.imgUser').addEventListener('click', () => {
             asideMovil.style.display = 'none';
         }
     }
+    var papeleras=document.getElementsByClassName('fa-trash');
+    for (let index = 0; index < papeleras.length; index++) {
+        const element = papeleras[index];
+        element.onclick=function(e){//e es un nombre que se le da a un evento, como cualquier otro nombre
+          /* e.target.parentElement.parentElement.remove();
+         alert('¿Estas seguro de que quieres borrar este elemento?')*/
+         var row=this.closest('tr'); // Esta es una manera mas elegante de hacer los mismo que la linea de arriba
+         row.remove(); //This es el elemento que se esta clicando, solamente ese
+        
+        };
+    }
+    document.addEventListener('DOMContentLoaded', () => {
+        // Establecer la fecha de hoy en el campo de entrada de tipo date
+        const fechaInput = document.getElementById('fecha');
+        const today = new Date();
+        const yyyy = today.getFullYear();
+        const mm = String(today.getMonth() + 1).padStart(2, '0'); // Enero es 0
+        const dd = String(today.getDate()).padStart(2, '0');
+        const todayFormatted = `${yyyy}-${mm}-${dd}`;
+        fechaInput.value = todayFormatted;
+    });

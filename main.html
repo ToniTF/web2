@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Main</title>
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -59,8 +61,76 @@
             </ul>
         </div>
         <section class="contenedorPrincipal">
+            <h3>Listado de incidencias</h3>
+            <div class="incidencias">
+                <form action="">
+                    <label for="fecha">Fecha</label>
+                    <input type="date" name="fecha" id="fecha">
+                    <label for="descripcion">Descripción</label>
+                    <input type="text" name="descripcion" id="descripcion">
+                    <button>Añadir</button>
+                </form>
+            </div>
+            <div class="lista">
+                <table>
+                    <thead>
+                        <th>ID</th>
+                        <th>Fechas</th>
+                        <th>Descripción</th>
+                        <th>Operaciones</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>01/01/2021</td>
+                            <td>Problema con el servidor</td>
+                            <td>
+                                <i class="fa-solid fa-pen-to-square"></i>
+                                <i class="fa-solid fa-trash"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>02/01/2021</td>
+                            <td>Problema con el servidor</td>
+                            <td>
+                                <i class="fa-solid fa-pen-to-square"></i>
+                                <i class="fa-solid fa-trash"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>03/01/2021</td>
+                            <td>Problema con el servidor</td>
+                            <td>
+                                <i class="fa-solid fa-pen-to-square"></i>
+                                <i class="fa-solid fa-trash"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>04/01/2021</td>
+                            <td>Problema con el servidor</td>
+                            <td>
+                                <i class="fa-solid fa-pen-to-square"></i>
+                                <i class="fa-solid fa-trash"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>05/01/2021</td>
+                            <td>Problema con el servidor</td>
+                            <td>
+                                <i class="fa-solid fa-pen-to-square"></i>
+                                <i class="fa-solid fa-trash"></i>
+                            </td>
+                        </tr>
+                </table>
+            </div>
 
-<p>Contenedor pricipal, que ocupa un 70% del ancho de su padre (excepto en móvil) en este caso la sección <main></main></p>
+
+            <p>Contenedor pricipal, que ocupa un 70% del ancho de su padre (excepto en móvil que ocupa el 100%), en este
+                caso su padre es una section.</p>
         </section>
     </main>
     <footer>

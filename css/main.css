@@ -14,6 +14,7 @@ header {
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    border-bottom: 2px solid #504b4b;
 }
 
 
@@ -60,6 +61,7 @@ aside {
 
 .contenedorPrincipal {
     width: 70%;
+    padding: 10px;
     font-size: 20px;
     color: white;
     background-image: url("../img/Fondo-Main.jpg"); /* URL de la imagen de fondo */
@@ -95,7 +97,37 @@ footer{
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    border-top: 2px solid #504b4b;
 }
+.incidencias {
+      
+    background-color: #dddddd; /* Fondo con opacidad */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+    margin-bottom: 20px; /* Espaciado inferior */
+    color: black;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  td i{
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #ca9f9f;
+  }
 
 @media (max-width: 768px) {
     body {
