@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Main</title>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -24,13 +25,13 @@
         </div>
         <div>
             <img class="imgUser" src="img/usuario.png" alt="Imagen Usuario">
-            <div>
-                <ul>
+            <div class="userMenu">
+                <ul id="userMenu" style="display: none;"> <!--Se podría hacer en el archivo css con #userMenu-->
                     <li>
                         <a href="">Datos de usuario</a>
                     </li>
                     <li>
-                        <a href="">Cerrar sesión</a>
+                        <a href="index.html">Cerrar sesión</a>
                     </li>
                 </ul>
             </div>
@@ -38,13 +39,34 @@
 
     </header>
     <main>
-        <aside>
-
+        <aside> <!--Menú lateral-->
+            <ul>
+                <li><i class="fa-solid fa-cart-shopping"></i>Pedidos</li>
+                <li><i class="fa-solid fa-newspaper"></i>Presupuestos</li>
+                <li><i class="fa-solid fa-file-invoice"></i>Facturas</li>
+                <li><i class="fa-solid fa-circle-exclamation"></i>Incidencias</li>
+                <li><i class="fa-solid fa-calendar"></i>Calendario</li>
+            </ul>
         </aside>
-        <section>
+        <div class="asideMovil">
+            <i id="burguer" class="fa-solid fa-bars"></i>
+            <ul id="asideMovil">
+                <li><i class="fa-solid fa-cart-shopping"></i>Pedidos</li>
+                <li><i class="fa-solid fa-newspaper"></i>Presupuestos</li>
+                <li><i class="fa-solid fa-file-invoice"></i>Facturas</li>
+                <li><i class="fa-solid fa-circle-exclamation"></i>Incidencias</li>
+                <li><i class="fa-solid fa-calendar"></i>Calendario</li>
+            </ul>
+        </div>
+        <section class="contenedorPrincipal">
 
+<p>Contenedor pricipal</p>
         </section>
     </main>
+    <footer>
+        <p> 2025 todos los derechos reservados</p>
+    </footer>
+    <script src="js/main.js"></script>
 
 </body>
 

@@ -1,11 +1,13 @@
-.logo3{
+.logo3 {
     height: 100px;
     width: 100px;
 }
-*{
+
+/** {
     border: 1px solid red;
-}
-header{
+}*/
+
+header {
     background-color: rgb(81, 81, 156);
     height: 100px;
     width: 100%;
@@ -13,9 +15,127 @@ header{
     display: flex;
     justify-content: space-between;
 }
-.imgUser{
+
+
+.imgUser {
     height: 100%;
     width: 100px;
-    border-radius: 50%; /*para que sea redondo*/
+    border-radius: 50%;
+    /*para que sea redondo*/
     background-color: white;
+
+}
+
+#userMenu {
+    display: none;
+    position: fixed;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    right: 10px;
+    top: 100px;
+    /* Ajusta según sea necesario */
+}
+
+#userMenu li {
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+#userMenu li a {
+    text-decoration: none;
+    color: black;
+}
+
+aside {
+    width: 30%;
+}
+
+.asideMovil {
+    display: none;
+}
+
+.contenedroPrincipal {
+    width: 70%;
+}
+
+main {
+    height: 80vh;
+    display: flex;
+}
+
+aside ul {
+    list-style: none;
+}
+
+aside li {
+    font-size: 30px;
+    margin: 10px;
+}
+
+aside i {
+    margin-right: 20px;
+    width: 30px;
+
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        display: none;
+    }
+
+    .logo3 {
+        height: 100px;
+        width: 100px;
+    }
+
+    header {
+        background-color: rgb(81, 81, 156);
+        height: 100px;
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    aside {
+        display: none;
+    }
+
+    .contenedroPrincipal {
+        width: 100%;
+    }
+
+    .asideMovil {
+        display: block;
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    #asideMovil {
+        list-style: none;
+        display: none;
+        font-size: 20px;
+        padding-left: 0;
+        
+    }
+
+    #burguer {
+        display: block;
+        font-size: 30px;
+        margin: 10px;
+    }
+
+    #asideMovil li {
+        margin: 10px;
+        border-bottom: 1px solid #504b4b;
+    }
+    #asideMovil li i {
+        margin-right: 20px;
+        width: 30px;
+    }
+
 }
