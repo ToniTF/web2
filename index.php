@@ -21,6 +21,7 @@
             <li><a href="registro.html">Registro</a></li>
         </ul>
     </nav>
+   
     <section class="seccion1">
         <h3>Relájate con HTML</h3>
         <p>HTML, que significa HyperText Markup Language (Lenguaje de Marcado de Hipertexto), es el estándar para crear y diseñar páginas web. A través de etiquetas y elementos, HTML estructura el contenido de la web, tales como texto, imágenes, enlaces, formularios, y mucho más.</p>
