@@ -18,6 +18,7 @@ $sql="INSERT INTO usuarios (nombre, apellidos, email, fecha, password)
 
 if (mysqli_query($conexion, $sql)) {
     echo "Nuevo registro creado";
+    header("Location: login.html");
 
 } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conexion);
