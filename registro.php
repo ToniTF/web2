@@ -13,8 +13,8 @@ if(isset($_POST["nombre"])){//si existe la variable nombre en el array post
        $stmt->bindParam(':password', $hashed_password);//asigna el valor de la contraseña encriptada al parámetro :password
        $stmt->execute();//ejecuta la consulta
        header("Location: login.html");//redirige a la página de login
-   } catch(PDOException $e){//si hay un error se muestra
-       echo "Error: " . $e->getMessage();
+   }catch(PDOException $e){
+       echo "Error: " . $e->getMessage();//muestra un mensaje de error si la consulta falla
    }
 }
 

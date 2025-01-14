@@ -17,7 +17,7 @@
         <ul>
             <li><a href="index.html">Inicio</a></li>
             <li><a href="contacto.html">Contacto</a></li>
-            <li><a href="login.html">Login</a></li>
+            <li><a href="login.php">Login</a></li>
             <li><a href="registro.php">Registro</a></li>
         </ul>
     </nav>

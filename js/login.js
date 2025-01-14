@@ -1,4 +1,4 @@
-var formulario = document.getElementById("formulario");
+/*var formulario = document.getElementById("formulario");
 formulario.onsubmit = function (e) {//onsubmit para capturar un evento de envio, hemos puesto el parametro e o cualquier otro nombre
     e.preventDefault(); //para prevenir el comportamiento por defecto del onsubmit, en nuestro caso para parar el envío
 var usuario=document.getElementById("usuario").value;
@@ -9,4 +9,4 @@ if(usuario=="admin" && password=="admin"){ //estamos creando un comando para com
     alert("Usuario o contraseña incorrectos")
 }
 
-}
+}*/

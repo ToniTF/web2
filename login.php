@@ -1,3 +1,26 @@
+<?php
+if(isset($_POST["email"])){//si existe la variable email en el array post
+    include("conexiondb.php");//incluye el archivo de conexión a la base de datos
+    $email = $_POST["email"];
+    $password = $_POST["password"];
+   $sql = "SELECT * FROM usuarios WHERE email = :email";//consulta sql para seleccionar los datos de la tabla usuarios donde el email sea igual al email introducido
+   $stmt = $conexion->prepare($sql);//prepara la consulta
+    $stmt->bindParam(':email', $email);//asigna el valor del campo email del formulario al parámetro :email
+    $stmt->execute();//ejecuta la consulta
+    $resultado = $stmt->fetch(PDO::FETCH_ASSOC);//guarda el resultado de la consulta en un array asociativo
+   
+    if($resultado){//si el resultado es verdadero
+        if(password_verify($password, $resultado["password"])){//si la contraseña introducida coincide con la contraseña encriptada en la base de datos
+            session_start();//inicia la sesión
+            $_SESSION["email"] = $email;//guarda el email en la variable de sesión
+            header("Location: main.html");//redirige a la página main
+        }else{
+            $error="Contraseña incorrecta";//muestra un mensaje de error si la contraseña es incorrecta
+        }
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -49,21 +72,22 @@
 
 <body>
     <div>
-        <a href="index.html"><img src="img/Logo3.jpeg" alt="logo"></a>
-        <form action="" method="get" id="formulario">
+        <a href="index.php"><img src="img/Logo3.jpeg" alt="logo"></a>
+        <form action="" method="post" id="formulario"><!--cambiamos get por post por que vamos a enviar password y no queremos que se vea en la url-->
             <!--Para introducir formularios en los que los usuarios puedan interactuar-->
             <label for=""> <!--Etiquetas-->
                 <strong>Usuario</strong>
             </label>
-            <input type="text" name="" id="usuario"> <!--Para que el usuario pueda interactuar-->
+            <input type="email" name="email" id="usuario" placeholder="Introduce tu email"> <!--Para que el usuario pueda interactuar-->
             <label for="password">
                 <strong>Password</strong>
             </label>
-            <input type="password" name="" id="password">
+            <input type="password" name="password" id="password" placeholder="Introduce tu contraseña">
             <button> <!--Para introducir un boton para enviar los datos cubiertos en las label-->
                 Login
             </button>
             <p>Haz clic en este <a class="enlace" href="registro.php"><strong><i>enlace</i></strong></a> para registrarte.</p>
+            <?php if(isset($error)){echo "<p style='color:red;'>$error</p>";}?>
         </form>
     </div>
     <script src="js/login.js"></script>
