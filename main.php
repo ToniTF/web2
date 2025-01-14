@@ -40,7 +40,7 @@ if(!isset($_SESSION["email"])){
                         <a href="">Datos de usuario</a>
                     </li>
                     <li>
-                        <a href="index.php">Cerrar sesión</a>
+                        <a href="cerrar_session.php">Cerrar sesión</a>
                     </li>
                 </ul>
             </div>

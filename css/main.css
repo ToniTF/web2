@@ -35,6 +35,7 @@ header {
     right: 10px;
     top: 100px;
     /* Ajusta según sea necesario */
+    z-index: 1000;
 }
 
 #userMenu li {
@@ -47,6 +48,8 @@ header {
 #userMenu li a {
     text-decoration: none;
     color: black;
+    display: block;
+    padding: 10px;
 }
 
 aside {
