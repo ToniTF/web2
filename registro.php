@@ -1,7 +1,18 @@
 <?php
 if(isset($_POST["nombre"])){//si existe la variable nombre en el array post
-    var_dump($_POST);
-    exit();
+   include("conexiondb.php");//incluye el archivo de conexión a la base de datos
+   try{
+       $sql = "INSERT INTO usuarios (nombre, apellidos, email, fecha, password) VALUES (:nombre, :apellidos, :email, :fecha, :password)";//consulta sql para insertar los datos en la tabla usuarios
+       $stmt = $conexion->prepare($sql);//prepara la consulta
+       $stmt->bindParam(':nombre', $_POST["nombre"]);//asigna el valor del campo nombre del formulario al parámetro :nombre
+       $stmt->bindParam(':apellidos', $_POST["apellidos"]);//asigna el valor del campo apellidos del formulario al parámetro :apellidos
+       $stmt->bindParam(':email', $_POST["email"]);//asigna el valor del campo email del formulario al parámetro :email
+       $stmt->bindParam(':fecha', $_POST["fecha"]);//asigna el valor del campo fecha del formulario al parámetro :fecha
+       $hashed_password = password_hash($_POST["password"], PASSWORD_DEFAULT);//encripta la contraseña antes de guardarla
+       $stmt->bindParam(':password', $hashed_password);//asigna el valor de la contraseña encriptada al parámetro :password
+       $stmt->execute();//ejecuta la consulta
+       header("Location: login.html");//redirige a la página de login
+   }
 }
 
 ?>
