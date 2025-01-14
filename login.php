@@ -13,7 +13,7 @@ if(isset($_POST["email"])){//si existe la variable email en el array post
         if(password_verify($password, $resultado["password"])){//si la contraseña introducida coincide con la contraseña encriptada en la base de datos
             session_start();//inicia la sesión
             $_SESSION["email"] = $email;//guarda el email en la variable de sesión
-            header("Location: main.html");//redirige a la página main
+            header("Location: main.php");//redirige a la página main
         }else{
             $error="Contraseña incorrecta";//muestra un mensaje de error si la contraseña es incorrecta
         }
