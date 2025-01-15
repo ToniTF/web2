@@ -16,9 +16,9 @@ include("./partials/cabecera.php");
     <div class="incidencias">
         <form action="nueva_incidencia.php" method="post" id="formIncidencias">
             <label for="fecha">Fecha</label>
-            <input type="date" name="fecha" id="fecha">
+            <input type="date" name="fecha" id="fecha" required>
             <label for="descripcion">Descripción</label>
-            <input type="text" name="descripcion" id="descripcion">
+            <input type="text" name="descripcion" id="descripcion" required>
             <button>Añadir</button>
         </form>
     </div>
