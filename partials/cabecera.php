@@ -1,5 +1,8 @@
 <?php
-
+$foto = $_SESSION["foto"];
+if ($foto == "") {
+    $foto = "img/usuario.png";
+}
 
 ?>
 <!DOCTYPE html>
@@ -30,11 +33,11 @@
             </style>
         </div>
         <div>
-            <img class="imgUser" src="img/usuario.png" alt="Imagen Usuario">
+            <img class="imgUser" src="<?php echo $foto; ?>" alt="Imagen Usuario">
             <div class="userMenu">
                 <ul id="userMenu" style="display: none;"> <!--Se podría hacer en el archivo css con #userMenu-->
                     <li>
-                        <a href="">Datos de usuario</a>
+                        <a href="datos_usuario.php">Datos de usuario</a>
                     </li>
                     <li>
                         <a href="cerrar_session.php">Cerrar sesión</a>

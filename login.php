@@ -3,7 +3,7 @@ if (isset($_POST["email"])) { //si existe la variable email en el array post
     include("conexiondb.php"); //incluye el archivo de conexión a la base de datos
     $email = $_POST["email"];
     $password = $_POST["password"];
-    $sql = "SELECT * FROM usuarios WHERE email = :email"; //consulta sql para seleccionar los datos de la tabla usuarios donde el email sea igual al email introducido
+    $sql = "SELECT password,id,nombre,apellidos,foto FROM usuarios WHERE email = :email"; //consulta sql para seleccionar los datos de la tabla usuarios donde el email sea igual al email introducido
     $stmt = $conexion->prepare($sql); //prepara la consulta
     $stmt->bindParam(':email', $email); //asigna el valor del campo email del formulario al parámetro :email
     $stmt->execute(); //ejecuta la consulta
@@ -13,6 +13,7 @@ if (isset($_POST["email"])) { //si existe la variable email en el array post
         if (password_verify($password, $resultado["password"])) { //si la contraseña introducida coincide con la contraseña encriptada en la base de datos
             session_start(); //inicia la sesión
             $_SESSION["email"] = $email; //guarda el email en la variable de sesión
+            $_SESSION["foto"] = $resultado["foto"]; //guarda la foto en la variable de sesión
             $_SESSION['idusuario'] = $resultado['id'];
             $_SESSION['nombre'] = $resultado['nombre'];
             $_SESSION['apellidos'] = $resultado['apellidos'];
