@@ -35,7 +35,7 @@ header {
     right: 10px;
     top: 100px;
     /* Ajusta según sea necesario */
-    z-index: 1000;
+   
 }
 
 #userMenu li {
@@ -79,6 +79,8 @@ aside {
 main {
     height: 80vh;
     display: flex;
+    position: relative;
+    z-index: -1;
 }
 
 aside ul {

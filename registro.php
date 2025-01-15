@@ -34,7 +34,7 @@ if(isset($_POST["nombre"])){//si existe la variable nombre en el array post
 
     <img src="img/Imagenpararegistro.jpeg" alt="Fondo" class="imgfondo">
     <div>
-        <a href="index.html"><img src="img/Logo3.jpeg" alt="Logo"></a>
+        <a href="index.php"><img src="img/Logo3.jpeg" alt="Logo"></a>
         <form class="register" action="" method="post"> <!--Una vez convertida la página en php se necesita un action y un método de envio get(se envía y ve en la url) o post (los datos no se ven en url y se envía en la cabecera) al cubrir el action me envía una página que se haya creado.-->
             <label for="nombre">Nombre</label>
             <input required type="text" name="nombre" id="nombre"> <!--necesitamos poner los nombres para trabjar con php, ya que sólo se envian los imput que tienen name.-->
