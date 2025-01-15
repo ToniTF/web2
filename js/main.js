@@ -16,17 +16,17 @@ menuMovil.onclick = function () {
         asideMovil.style.display = 'none';
     }
 }
-var papeleras = document.getElementsByClassName('fa-trash');
+/*var papeleras = document.getElementsByClassName('fa-trash');
 for (let index = 0; index < papeleras.length; index++) {
-    const element = papeleras[index];
-    element.onclick = function (e) {//e es un nombre que se le da a un evento, como cualquier otro nombre
+    const element = papeleras[index];*/
+    /*element.onclick = function (e) {//e es un nombre que se le da a un evento, como cualquier otro nombre
         /* e.target.parentElement.parentElement.remove();
        alert('¿Estas seguro de que quieres borrar este elemento?')*/
         var row = this.closest('tr'); // Esta es una manera mas elegante de hacer los mismo que la linea de arriba
         row.remove(); //This es el elemento que se esta clicando, solamente ese
 
-    };
-}
+   /* };*/
+/*}
 document.addEventListener('DOMContentLoaded', () => {
     // Establecer la fecha de hoy en el campo de entrada de tipo date
     const fechaInput = document.getElementById('fecha');
@@ -87,6 +87,7 @@ function obtenerMaxId(idTabla) {
     }
     return maxId;
 }
+*/
 
 
 

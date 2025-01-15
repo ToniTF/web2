@@ -1,21 +1,24 @@
 <?php
-if(isset($_POST["email"])){//si existe la variable email en el array post
-    include("conexiondb.php");//incluye el archivo de conexión a la base de datos
+if (isset($_POST["email"])) { //si existe la variable email en el array post
+    include("conexiondb.php"); //incluye el archivo de conexión a la base de datos
     $email = $_POST["email"];
     $password = $_POST["password"];
-   $sql = "SELECT * FROM usuarios WHERE email = :email";//consulta sql para seleccionar los datos de la tabla usuarios donde el email sea igual al email introducido
-   $stmt = $conexion->prepare($sql);//prepara la consulta
-    $stmt->bindParam(':email', $email);//asigna el valor del campo email del formulario al parámetro :email
-    $stmt->execute();//ejecuta la consulta
-    $resultado = $stmt->fetch(PDO::FETCH_ASSOC);//guarda el resultado de la consulta en un array asociativo
-   
-    if($resultado){//si el resultado es verdadero
-        if(password_verify($password, $resultado["password"])){//si la contraseña introducida coincide con la contraseña encriptada en la base de datos
-            session_start();//inicia la sesión
-            $_SESSION["email"] = $email;//guarda el email en la variable de sesión
-            header("Location: main.php");//redirige a la página main
-        }else{
-            $error="Contraseña incorrecta";//muestra un mensaje de error si la contraseña es incorrecta
+    $sql = "SELECT * FROM usuarios WHERE email = :email"; //consulta sql para seleccionar los datos de la tabla usuarios donde el email sea igual al email introducido
+    $stmt = $conexion->prepare($sql); //prepara la consulta
+    $stmt->bindParam(':email', $email); //asigna el valor del campo email del formulario al parámetro :email
+    $stmt->execute(); //ejecuta la consulta
+    $resultado = $stmt->fetch(PDO::FETCH_ASSOC); //guarda el resultado de la consulta en un array asociativo
+
+    if ($resultado) { //si el resultado es verdadero
+        if (password_verify($password, $resultado["password"])) { //si la contraseña introducida coincide con la contraseña encriptada en la base de datos
+            session_start(); //inicia la sesión
+            $_SESSION["email"] = $email; //guarda el email en la variable de sesión
+            $_SESSION['idusuario'] = $resultado['id'];
+            $_SESSION['nombre'] = $resultado['nombre'];
+            $_SESSION['apellidos'] = $resultado['apellidos'];
+            header("Location: main.php"); //redirige a la página main
+        } else {
+            $error = "Contraseña incorrecta"; //muestra un mensaje de error si la contraseña es incorrecta
         }
     }
 }
@@ -87,7 +90,9 @@ if(isset($_POST["email"])){//si existe la variable email en el array post
                 Login
             </button>
             <p>Haz clic en este <a class="enlace" href="registro.php"><strong><i>enlace</i></strong></a> para registrarte.</p>
-            <?php if(isset($error)){echo "<p style='color:red;'>$error</p>";}?>
+            <?php if (isset($error)) {
+                echo "<p style='color:red;'>$error</p>";
+            } ?>
         </form>
     </div>
     <script src="js/login.js"></script>

@@ -1,8 +1,12 @@
 <?php
 session_start();
-if(!isset($_SESSION["email"])){
+if (!isset($_SESSION["email"])) {
     header("Location: login.php");
 }
+include("conexiondb.php");
+$sql = "SELECT * FROM incidencias";
+$resultado = $conexion->query($sql);
+
 ?>
 
 <!DOCTYPE html>
@@ -70,7 +74,7 @@ if(!isset($_SESSION["email"])){
         <section class="contenedorPrincipal">
             <h3>Listado de incidencias</h3>
             <div class="incidencias">
-                <form action="" id="formIncidencias">
+                <form action="nueva_incidencia.php" method="post" id="formIncidencias">
                     <label for="fecha">Fecha</label>
                     <input type="date" name="fecha" id="fecha">
                     <label for="descripcion">Descripción</label>
@@ -87,7 +91,20 @@ if(!isset($_SESSION["email"])){
                         <th>Operaciones</th>
                     </thead>
                     <tbody id="tbodyIncidencias">
-                        <tr>
+                        <?php
+                        while ($row = $resultado->fetch()) {
+                            echo "<tr>
+                            <td>" . $row['id'] . "</td>
+                            <td>" . $row['fecha'] . "</td>
+                            <td>" . $row['descripcion'] . "</td>
+                            <td>
+                                <i class='fa-solid fa-pen-to-square'></i>
+                                <i class='fa-solid fa-trash'></i>
+                                </td>
+                                                </tr>";
+                        }
+                        ?>
+                        <!--<tr>
                             <td>1</td>
                             <td>01/01/2021</td>
                             <td>Problema con el servidor</td>
@@ -131,7 +148,7 @@ if(!isset($_SESSION["email"])){
                                 <i class="fa-solid fa-pen-to-square"></i>
                                 <i class="fa-solid fa-trash"></i>
                             </td>
-                        </tr>
+                        </tr>-->
                 </table>
             </div>
 
